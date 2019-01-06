@@ -2,10 +2,13 @@ CC=gcc
 
 default: 
 	echo compiling new binary
-	$(CC) -o voct main.c
+	$(CC) -o genVOctTable main.c
 	
 clean:
 	echo removing binary
-	rm voct
+	rm genVOctTable
+
+write:
+	./genVOctTable > ../vOctTable.h
 	
-all: clean default
+all: clean default write
