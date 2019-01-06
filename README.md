@@ -1,6 +1,6 @@
 # Planck - Auduino Modular Synth Concept
 
-granular-esque VCO based on the Auduino in the eurorack format
+granular-esque VCO based on the [Auduino](https://code.google.com/archive/p/tinkerit/wikis/Auduino.wiki) in the eurorack format
 
 ## general outline
 - two grains as in original Auduino
@@ -15,12 +15,4 @@ granular-esque VCO based on the Auduino in the eurorack format
 ## chaos
 - grain frequency CV inputs are digitally mixed with random values
 - random values are sampled at every chaos trigger signal
-- value of chaos amount pot determines by how much the original grain CV is offset (+-)
-
-## software notes
-- arduino code must have chromatic scale mapping to V/Oct for stepped notes *or* use map() to correctly map fluently
-- how slow is random() ?
-
-## hardware notes
-- all input voltages must be mapped to 0-5V and [protected against overvoltage](http://www.doepfer.de/DIY/a100_diy.htm)
-	
+- value of chaos amount pot determines by how much the original grain frequency CV is offset (+-)
