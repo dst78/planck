@@ -1,18 +1,23 @@
 # Planck - Auduino Modular Synth Concept
 
-granular-esque VCO based on the [Auduino](https://code.google.com/archive/p/tinkerit/wikis/Auduino.wiki) in the eurorack format
+granular-esque VCO based on the [Auduino](https://code.google.com/archive/p/tinkerit/wikis/Auduino.wiki) for the eurorack format
 
 ## general outline
-- two grains as in original Auduino
-- 4 pots for grain frequency and decay
-- 5th pot for V/Oct
-- CV input for V/Oct, normalled to V/Oct pot
-- audio out
-- 6th pot for chaos amount
-- chaos amount in, normalled to chaos pot
-- chaos trigger in, maybe normalled to momentary switch
+Planck processes two triangle waves to a grain. Both waves can be manipulated in terms of frequency and decay in order to achieve various harmonics. 
+
+The module allows for manual setting of a frequency via potentiometer or CV input. 
+
+What sets this module appart from the original Auduino is the addition of chaos.
 
 ## chaos
-- grain frequency CV inputs are digitally mixed with random values
-- random values are sampled at every chaos trigger signal
-- value of chaos amount pot determines by how much the original grain frequency CV is offset (+-)
+The triangle wave frequencies can be modulated through external CV. 
+
+What is happening internally is that once a chaos trigger is received one random value is generated for each triangle wave. This value is shifting the wave frequency up or down, resulting in different grain harmonics.
+
+The module comes with a potentiometer and CV input pair for external control of the chaos amount. With this the effects of chaos can be completely switched off even when receiving chaos triggers.
+
+## hardware notes
+Since this module is Arduino based, all input/outputs have been voltage limited via Schottky diodes to 0-5V. 
+
+## What's in the name?
+The module was named in honor of Max Planck and as a reference to the Planck-length. 
