@@ -8,7 +8,4 @@ clean:
 	echo removing binary
 	rm genVOctTable
 
-write:
-	./genVOctTable > ../vOctTable.h
-	
-all: clean default write
+all: clean default
