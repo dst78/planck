@@ -19,5 +19,8 @@ The module comes with a potentiometer and CV input pair for external control of 
 ## hardware notes
 Since this module is Arduino based, all input/outputs have been voltage limited via Schottky diodes to 0-5V. 
 
+## A note on tuning
+Due to variance in the frequency crystals of individual Arduinos it is likely that you have to tune your module before it is usable. You can do this by following the instructions outlined in the README inside the freqGen folder.
+
 ## What's in the name?
 The module was named in honor of Max Planck and as a reference to the Planck-length. 
