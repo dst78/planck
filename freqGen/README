@@ -1,0 +1,5 @@
+This generates an array of values which map voltages to V/Oct frequencies.
+
+The original code is linked on http://www.ginkosynthese.com/product/grains/
+
+At this time the frequency tracking isn't very good and the intervals are larger than they should be. Any help in fixing the formula to correct for that is appreciated.
