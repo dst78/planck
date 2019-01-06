@@ -126,9 +126,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="311.37575"
-     inkscape:cy="347.72841"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="529.616"
+     inkscape:cy="456.25454"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -6126,13 +6126,27 @@
      id="layer2"
      inkscape:label="circuit"
      style="display:inline">
-    <rect
-       style="display:inline;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.16499996;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect36387-1-5-33"
-       width="28.964098"
-       height="74.909996"
-       x="134.09897"
-       y="136.65436" />
+    <g
+       id="g2319">
+      <rect
+         y="136.65436"
+         x="134.09897"
+         height="74.909996"
+         width="28.964098"
+         id="rect36387-1-5-33"
+         style="display:inline;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.16499996;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text36430-4-4-64-4-5"
+         y="209.40201"
+         x="160.6228"
+         style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
+         xml:space="preserve"><tspan
+           style="font-size:3.49249959px;text-align:end;text-anchor:end;stroke-width:0.43656245"
+           y="209.40201"
+           x="160.6228"
+           id="tspan36428-0-7-22-47-1"
+           sodipodi:role="line">Arduino Nano</tspan></text>
+    </g>
     <g
        transform="matrix(1.65,0,0,1.65,-355.23342,-37.644654)"
        style="display:inline"
@@ -8514,8 +8528,8 @@
          y="280.60513"
          style="font-size:3.52777767px;line-height:3px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2297"><tspan
-   id="tspan2299"
-   style="font-size:6.3499999px;line-height:3px;text-align:center;text-anchor:middle;stroke-width:0.26458332">License: CC-BY-SA</tspan></tspan><tspan
+           id="tspan2299"
+           style="font-size:6.3499999px;line-height:3px;text-align:center;text-anchor:middle;stroke-width:0.26458332">License: CC-BY-SA</tspan></tspan><tspan
          sodipodi:role="line"
          x="101.57417"
          y="284.7048"
