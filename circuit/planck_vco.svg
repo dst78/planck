@@ -126,11 +126,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0000001"
-     inkscape:cx="501.58789"
-     inkscape:cy="435.84383"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="330.64924"
+     inkscape:cy="558.63201"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1057"
@@ -5607,28 +5607,6 @@
        cx="148.59659"
        cy="104.44732"
        r="0.74250007" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="126.20846"
-       y="159.55914"
-       id="text36430-4-4-64-2-0"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-4-7"
-         x="126.20846"
-         y="159.55914"
-         style="font-size:2.32833338px;text-align:end;text-anchor:end;stroke-width:0.43656245">Ext. Chaos Trigger</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="125.7252"
-       y="163.9758"
-       id="text36430-4-4-64-2-1"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-4-4"
-         x="125.7252"
-         y="163.9758"
-         style="font-size:2.32833338px;text-align:end;text-anchor:end;stroke-width:0.43656245">Audio Out</tspan></text>
     <circle
        style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.16499998;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path823-01-88-1-1-8-1"
@@ -6043,83 +6021,6 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="175.01459"
-       y="189.12178"
-       id="text36430-4-4-64-56"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-8"
-         x="175.01459"
-         y="189.12178"
-         style="font-size:2.32833338px;text-align:start;text-anchor:start;stroke-width:0.43656245">Pitch 1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="175.02946"
-       y="184.68468"
-       id="text36430-4-4-64-6"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-29"
-         x="175.02946"
-         y="184.68468"
-         style="font-size:2.32833338px;text-align:start;text-anchor:start;stroke-width:0.43656245">Decay 2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="175.02121"
-       y="180.47832"
-       id="text36430-4-4-64-26"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-95"
-         x="175.02121"
-         y="180.47832"
-         style="font-size:2.32833338px;text-align:start;text-anchor:start;stroke-width:0.43656245">Decay 1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="175.02454"
-       y="176.5488"
-       id="text36430-4-4-64-20"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-5"
-         x="175.02454"
-         y="176.5488"
-         style="font-size:2.32833338px;text-align:start;text-anchor:start;stroke-width:0.43656245">Pitch 2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="175.22495"
-       y="172.24583"
-       id="text36430-4-4-64-75"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-52"
-         x="175.22495"
-         y="172.24583"
-         style="font-size:2.32833338px;text-align:start;text-anchor:start;stroke-width:0.43656245">V/Oct</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="175.11238"
-       y="168.16679"
-       id="text36430-4-4-64-35"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-58"
-         x="175.11238"
-         y="168.16679"
-         style="font-size:2.32833338px;text-align:start;text-anchor:start;stroke-width:0.43656245">Chaos Amount</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
-       x="125.86514"
-       y="180.51413"
-       id="text36430-4-4-64-2-10"><tspan
-         sodipodi:role="line"
-         id="tspan36428-0-7-22-4-6"
-         x="125.86514"
-         y="180.51413"
-         style="font-size:2.32833338px;text-align:end;text-anchor:end;stroke-width:0.43656245">Int. Chaos Trigger</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
        x="179.91083"
        y="101.07529"
        id="text36430-4-4-64-8-3"><tspan
@@ -6163,51 +6064,6 @@
        style="fill:none;stroke:#000000;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 169.54725,108.69098 h 4.78479"
        id="path42538"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#2200c9;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.54725,167.34335 h 4.24458"
-       id="path42540"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#f9a800;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.54725,171.53435 h 4.24458"
-       id="path42540-9"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#c4b100;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.54725,179.91635 h 4.24458"
-       id="path42540-2"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#0098e1;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.54725,175.72535 h 4.24458"
-       id="path42540-5"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#c4b100;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.54725,184.10735 h 4.24458"
-       id="path42540-94"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#0098e1;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.54725,188.29835 h 4.24458"
-       id="path42540-6"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#006300;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 127.63721,158.96135 h 4.24462"
-       id="path42540-7"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#ff1cef;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 127.63721,163.15235 h 4.24462"
-       id="path42540-96"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;stroke:#0000e8;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 127.63721,179.91635 h 4.24462"
-       id="path42540-60"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#ff1cef;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -8629,5 +8485,155 @@
          y="284.7048"
          style="font-size:3.52777767px;line-height:3px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2301">https://creativecommons.org/licenses/by-sa/3.0/deed.en</tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#006300;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 140.11926,158.96135 h 4.24462"
+       id="path42540-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#ff1cef;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 140.33721,163.15235 h 4.24462"
+       id="path42540-96"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#0000e8;stroke-width:1.08899999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 140.33721,179.91635 h 4.24462"
+       id="path42540-60"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249077px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656135"
+       x="175.09529"
+       y="189.12114"
+       id="text36430-4-4-64-56"
+       transform="scale(0.99999661,1.0000034)"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-8"
+         x="175.09529"
+         y="189.12114"
+         style="font-size:2.32832742px;text-align:start;text-anchor:start;stroke-width:0.43656135">Pitch 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249077px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656135"
+       x="175.11017"
+       y="184.68404"
+       id="text36430-4-4-64-6"
+       transform="scale(0.99999661,1.0000034)"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-29"
+         x="175.11017"
+         y="184.68404"
+         style="font-size:2.32832742px;text-align:start;text-anchor:start;stroke-width:0.43656135">Decay 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249077px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656135"
+       x="175.10191"
+       y="180.47769"
+       id="text36430-4-4-64-26"
+       transform="scale(0.99999661,1.0000034)"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-95"
+         x="175.10191"
+         y="180.47769"
+         style="font-size:2.32832742px;text-align:start;text-anchor:start;stroke-width:0.43656135">Decay 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249077px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656135"
+       x="175.10524"
+       y="176.54817"
+       id="text36430-4-4-64-20"
+       transform="scale(0.99999661,1.0000034)"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-5"
+         x="175.10524"
+         y="176.54817"
+         style="font-size:2.32832742px;text-align:start;text-anchor:start;stroke-width:0.43656135">Pitch 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249077px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656135"
+       x="175.30563"
+       y="172.24524"
+       id="text36430-4-4-64-75"
+       transform="scale(0.99999661,1.0000034)"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-52"
+         x="175.30563"
+         y="172.24524"
+         style="font-size:2.32832742px;text-align:start;text-anchor:start;stroke-width:0.43656135">V/Oct</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249077px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656135"
+       x="175.19308"
+       y="168.16623"
+       id="text36430-4-4-64-35"
+       transform="scale(0.99999661,1.0000034)"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-58"
+         x="175.19308"
+         y="168.16623"
+         style="font-size:2.32832742px;text-align:start;text-anchor:start;stroke-width:0.43656135">Chaos Amount</tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#2200c9;stroke-width:1.08899724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.62726,167.34347 h 4.24455"
+       id="path42540"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#f9a800;stroke-width:1.08899724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.62726,171.53447 h 4.24455"
+       id="path42540-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#c4b100;stroke-width:1.08899724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.62726,179.91647 h 4.24455"
+       id="path42540-2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#0098e1;stroke-width:1.08899724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.62726,175.72547 h 4.24455"
+       id="path42540-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#c4b100;stroke-width:1.08899724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.62726,184.10748 h 4.24455"
+       id="path42540-94"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;stroke:#0098e1;stroke-width:1.08899724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.62726,188.29849 h 4.24455"
+       id="path42540-6"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
+       x="129.06851"
+       y="159.55914"
+       id="text36430-4-4-64-2-0"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-4-7"
+         x="129.06851"
+         y="159.55914"
+         style="font-size:2.32833338px;text-align:end;text-anchor:end;stroke-width:0.43656245">Ext. Chaos Trigger</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
+       x="128.58525"
+       y="163.9758"
+       id="text36430-4-4-64-2-1"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-4-4"
+         x="128.58525"
+         y="163.9758"
+         style="font-size:2.32833338px;text-align:end;text-anchor:end;stroke-width:0.43656245">Audio Out</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.49249959px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.43656245"
+       x="128.7252"
+       y="180.51413"
+       id="text36430-4-4-64-2-10"><tspan
+         sodipodi:role="line"
+         id="tspan36428-0-7-22-4-6"
+         x="128.7252"
+         y="180.51413"
+         style="font-size:2.32833338px;text-align:end;text-anchor:end;stroke-width:0.43656245">Int. Chaos Trigger</tspan></text>
   </g>
 </svg>
