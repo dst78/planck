@@ -1,3 +1,6 @@
+// custom tuning
+// baseNote used: 32.6600
+// baseIncr used: 1.9550
 const uint16_t freqTable[] PROGMEM = {
 68, 
 69, 69, 69, 69, 70, 70, 70, 70, 71, 71, 
