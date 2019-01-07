@@ -47,6 +47,12 @@
  * Set to true to activate the LED for chaos trigger debugging.
  */
 #define DEBUG false
+/**
+ * Set to true if you want to enable internal chaos triggers.
+ * 
+ * These are generated whenever a V/Oct change of more than a semitone is detected.
+ */
+#define USE_INTERNAL_CHAOS true
 
 uint16_t syncPhaseAcc;
 uint16_t syncPhaseInc;
@@ -73,7 +79,17 @@ uint8_t  grain2Decay;
 #define CHAOS_AMOUNT_MIN -150
 #define CHAOS_AMOUNT_MAX 150
 
+/**
+ * Change in millivolts that is required to trigger the internal chaos flag.
+ * 
+ * One semitone == 1024 / 5 / 12 = 17.0666666 Volts
+ */
+#define INTERNAL_CHAOS_THRESHOLD 17
+
+
+
 // current chaos amount as per potentiometer / CV
+int previousNote;
 uint8_t chaosAmount;
 int16_t chaosVal1, oldChaosVal1, newChaosVal1;
 int16_t chaosVal2, oldChaosVal2, newChaosVal2;
@@ -155,6 +171,20 @@ void setup() {
  * main loop
  */
 void loop() {
+
+  // read V/Oct
+  int analogNote = analogRead(SYNC_CONTROL);
+
+  #if USE_INTERNAL_CHAOS
+  // detect changes larger than a semitone
+  int diff = analogNote - previousNote;
+  
+  if (abs(diff) > INTERNAL_CHAOS_THRESHOLD) {
+    triggerInternalChaos();
+    previousNote = analogNote;
+  }
+  #endif
+    
   // new chaos trigger has been received, read chaos amount and process the new values
   if (readChaos) {
     readChaos = false; // reset flag
@@ -189,9 +219,6 @@ void loop() {
   digitalWrite(LED_PIN, ledState);
   #endif
 
-  // read V/Oct
-  int analogNote = analogRead(SYNC_CONTROL);
-
   // syncPhaseInc is the increment of progression through a grain
   syncPhaseInc = mapFreq(analogNote);
 
@@ -223,7 +250,7 @@ void audioOn() {
 }
 
 /**
- * Interrupt timer
+ * PWM interrupt timer
  * 
  * This does the heavy lifting of calculating the PWM value for audio
  */
@@ -277,15 +304,28 @@ SIGNAL(PWM_INTERRUPT) {
 }
 
 /**
- * interrupt handler
+ * chaos interrupt handler
  * 
  * calculates new grain frequency offset based on chaos value
  */
 void handleChaosTrigger() {
   readChaos = true;
+  digitalWrite(CHAOS_TRIG_INT, LOW);
   #if DEBUG
   ledState = !ledState;
   #endif
+}
+
+/**
+ * Sets the internal chaos trigger pin high. This will be picked up by the chaos
+ * interrupt handler and chaos will be processed as normal.
+ * 
+ * Strictly speaking this function is superfluous and simply setting readChaos = true
+ * would do the job but this approach opens the trigger up to the outside, should
+ * anyone including me change the schematic later. 
+ */
+void triggerInternalChaos() {
+  digitalWrite(CHAOS_TRIG_INT, HIGH);
 }
 
 //--------------------------------------------------------------
