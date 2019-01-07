@@ -1,20 +1,51 @@
-// ************************************************************************
-// Based on the Auduino Synthesizer v5 by Peter Knight http://tinker.it
-// Help:      http://code.google.com/p/tinkerit/wiki/Auduino
-// More help: http://groups.google.com/group/auduino
-//
-// ************************************************************************
-// modifications by Anoikis Nomads
-// version 1.0 - first release
-// ************************************************************************
-
+/**
+ * Anoikis Nomads :: Planck
+ * 
+ * 
+ * A granular-synthesis VCO for the Eurorack format, based on the 
+ * Auduino Synthesizer v5 by Peter Knight http://tinker.it
+ * 
+ * 
+ * All information on Planck is on https://github.com/dst78/planck
+ * 
+ * 
+ * Released under Creative Commons Attribution-ShareAlike 3.0 Unported
+ * https://creativecommons.org/licenses/by-sa/3.0/deed.de
+ * 
+ * 
+ * Information about the original Auduino:
+ * help:      http://code.google.com/p/tinkerit/wiki/Auduino
+ * more help: http://groups.google.com/group/auduino
+ * 
+ * The voltage-per-octave mapping was derived from a code found on
+ * http://www.ginkosynthese.com/product/grains/ which is another Auduino
+ * derivative for Eurorack.
+ */
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-#include "noteTables.h"
+/** 
+ * V/Oct frequency mapping
+ */
 #include "vOctTable.h"
 
+/** 
+ * In case you want to use other note mappings, check the options in the .h 
+ * file below. 
+ * 
+ * You will need to replace the line
+ *    syncPhaseInc = mapFreq(analogNote);
+ * in the loop() function with whatever mapping function you'll use.
+ * 
+ * In its default state, the code below doesn't use the noteTables.h at all but
+ * since the compiler optimizes it away there is no point in removing the include.
+ */
+#include "noteTables.h"
+
 // *******************************************************************************
+/**
+ * Set to true to activate the LED for chaos trigger debugging.
+ */
 #define DEBUG false
 
 uint16_t syncPhaseAcc;
@@ -30,10 +61,15 @@ uint16_t grain2PhaseInc;
 uint16_t grain2Amp;
 uint8_t  grain2Decay;
 
-// length of interpolation between chaos-corrected grain frequencies 
-// feel free to increase this for a more gradual change (or connect to another pot / jack for CV control)
+/**
+ * length of interpolation between chaos-corrected grain frequencies.
+ * feel free to increase this for a more gradual change (or connect to another pot / jack for CV control)
+ */
 #define CHAOS_INTERPOLATION_STEPS 50  
-// adjust this if you want more / less maximum chaos. minimum chaos is always 0
+
+/** 
+ * adjust these if you want a different range for maximum chaos. minimum chaos is always 0.
+ */
 #define CHAOS_AMOUNT_MIN -150
 #define CHAOS_AMOUNT_MAX 150
 
@@ -90,17 +126,22 @@ volatile byte ledState = LOW;
 #define PWM_INTERRUPT TIMER2_OVF_vect
 #endif
 
+/**
+ * Arduino setup routine
+ */
 void setup() {
+  // needed for the internal chaos trigger
   randomSeed(analogRead(1));
-  
-  pinMode(PWM_PIN, OUTPUT);
-  
+
+  // set up PWM audio out
+  pinMode(PWM_PIN, OUTPUT); 
   audioOn();
 
   #if DEBUG
   pinMode(LED_PIN, OUTPUT);
   #endif
 
+  // configure chaos pins and interrupts
   pinMode(CHAOS_TRIG_INT, OUTPUT);
   pinMode(CHAOS_TRIG_EXT, INPUT_PULLUP);
   
@@ -123,18 +164,21 @@ void loop() {
     // hysteresis for the potentiometer
     if (val > 100) {
       chaosInterpolationStep = 0;
-      chaosAmount = map(val, 0, 1024, 0, 100);
+      chaosAmount = map(val, 0, 1024, 0, 100); // map voltage to percent
       oldChaosVal1 = newChaosVal1;
-      newChaosVal1 = (random(CHAOS_AMOUNT_MIN, CHAOS_AMOUNT_MAX) * chaosAmount) / 100;
       oldChaosVal2 = newChaosVal2;
+      // generate new chaos values, dampened by chaosAmount
+      newChaosVal1 = (random(CHAOS_AMOUNT_MIN, CHAOS_AMOUNT_MAX) * chaosAmount) / 100;
       newChaosVal2 = (random(CHAOS_AMOUNT_MIN, CHAOS_AMOUNT_MAX) * chaosAmount) / 100;
       
     } else {
+      // ensure chaos values are zero to let the original sound through
       chaosVal1 = 0;
       chaosVal2 = 0;
     }
   }
 
+  // use linear interpolation to change from old chaos values to new ones
   if (chaosInterpolationStep < CHAOS_INTERPOLATION_STEPS) {
     chaosVal1 = map(chaosInterpolationStep, 0, CHAOS_INTERPOLATION_STEPS, oldChaosVal1, newChaosVal1);
     chaosVal2 = map(chaosInterpolationStep, 0, CHAOS_INTERPOLATION_STEPS, oldChaosVal2, newChaosVal2);
@@ -145,11 +189,13 @@ void loop() {
   digitalWrite(LED_PIN, ledState);
   #endif
 
+  // read V/Oct
   int analogNote = analogRead(SYNC_CONTROL);
-  
+
   // syncPhaseInc is the increment of progression through a grain
   syncPhaseInc = mapFreq(analogNote);
 
+  // read grain variables, apply chaos
   grain1PhaseInc = mapPhaseInc(constrain(chaosVal1 + analogRead(GRAIN1_FREQ_CONTROL), 0, 1023)) / 2;
   grain2PhaseInc = mapPhaseInc(constrain(chaosVal2 + analogRead(GRAIN2_FREQ_CONTROL), 0, 1023)) / 2;
   grain1Decay    = analogRead(GRAIN1_DECAY_CONTROL) / 8;
@@ -157,7 +203,7 @@ void loop() {
 }
 
 /**
- * initializes the timer interrupt for grain calculation
+ * initializes the timer interrupt for audio PWM output
  */
 void audioOn() {
 #if defined(__AVR_ATmega8__)
@@ -177,7 +223,9 @@ void audioOn() {
 }
 
 /**
- * interrupt timer
+ * Interrupt timer
+ * 
+ * This does the heavy lifting of calculating the PWM value for audio
  */
 SIGNAL(PWM_INTERRUPT) {
   uint8_t value;
@@ -229,13 +277,6 @@ SIGNAL(PWM_INTERRUPT) {
 }
 
 /**
- * linear interpolation
- */
-float lerp(float min, float max, float val) {
-  return min + val * (max - min);
-}
-
-/**
  * interrupt handler
  * 
  * calculates new grain frequency offset based on chaos value
@@ -252,24 +293,31 @@ void handleChaosTrigger() {
 // the frequency arrays can be found in noteTables.h
 //--------------------------------------------------------------
 
+
+/**
+ * maps an input voltage to a V/Oct scale
+ * 
+ * The PWM frequencies are found in vOctTable.h and can be customized through the C code in the ./freqGen subfolder.
+ */
 uint16_t mapFreq(uint16_t input) {
   return pgm_read_word_near(freqTable + input);
 }
 
+/** 
+ * Smooth logarithmic mapping  
+ * 
+ * used in the grain decay calculation
+ */
+uint16_t antilogTable[] = {
+  64830, 64132, 63441, 62757, 62081, 61413, 60751, 60097, 59449, 58809, 58176, 57549, 56929, 56316, 55709, 55109,
+  54515, 53928, 53347, 52773, 52204, 51642, 51085, 50535, 49991, 49452, 48920, 48393, 47871, 47356, 46846, 46341,
+  45842, 45348, 44859, 44376, 43898, 43425, 42958, 42495, 42037, 41584, 41136, 40693, 40255, 39821, 39392, 38968,
+  38548, 38133, 37722, 37316, 36914, 36516, 36123, 35734, 35349, 34968, 34591, 34219, 33850, 33486, 33125, 32768
+};
+
+/**
+ * maps voltages to logarithmic values
+ */
 uint16_t mapPhaseInc(uint16_t input) {
   return (antilogTable[input & 0x3f]) >> (input >> 6);
-}
-
-uint16_t mapMidi(uint16_t input) {
-  return (midiTable[input]);
-}
-
-uint16_t mapChromatic(uint16_t input) {
-  uint8_t value = input / (1024 / 59);
-  return (chromaticTable[value]);
-}
-
-uint16_t mapPentatonic(uint16_t input) {
-  uint8_t value = input / (1024 / 45);
-  return (pentatonicTable[value]);
 }

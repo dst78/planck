@@ -1,12 +1,3 @@
-// Smooth logarithmic mapping
-//
-uint16_t antilogTable[] = {
-  64830, 64132, 63441, 62757, 62081, 61413, 60751, 60097, 59449, 58809, 58176, 57549, 56929, 56316, 55709, 55109,
-  54515, 53928, 53347, 52773, 52204, 51642, 51085, 50535, 49991, 49452, 48920, 48393, 47871, 47356, 46846, 46341,
-  45842, 45348, 44859, 44376, 43898, 43425, 42958, 42495, 42037, 41584, 41136, 40693, 40255, 39821, 39392, 38968,
-  38548, 38133, 37722, 37316, 36914, 36516, 36123, 35734, 35349, 34968, 34591, 34219, 33850, 33486, 33125, 32768
-};
-
 // Stepped chromatic mapping
 //
 uint16_t midiTable[] = {
@@ -24,6 +15,13 @@ uint16_t midiTable[] = {
   17557, 18601, 19708, 20879, 22121, 23436, 24830, 26306                              // C9 - G9    128
 };
 
+/**
+ * maps an input voltage to PWM frequencies for midi scale.
+ */
+uint16_t mapMidi(uint16_t input) {
+  return (midiTable[input]);
+}
+
 uint16_t chromaticTable[60] = {
 //C      C#     D      D#     E      F      F#     G      G#     A      A#     B
   137,   150,   154,   163,   173,   183,   194,   206,   218,   231,   244,   259,   // C2 - B2     12
@@ -32,6 +30,15 @@ uint16_t chromaticTable[60] = {
   1097,  1163,  1232,  1305,  1383,  1465,  1552,  1644,  1742,  1845,  1955,  2071,  // C5 - B5     48
   2195,  2325,  2463,  2610,  2765,  2930,  3104,  3288,  3484,  3691,  3910,  4143,  // C6 - B6     60  
 };
+
+/**
+ * maps an input voltage to PWM frequencies for chromatic scale.
+ */
+uint16_t mapChromatic(uint16_t input) {
+  uint8_t value = input / (1024 / 59);
+  return (chromaticTable[value]);
+}
+
 
 // Stepped Pentatonic mapping
 uint16_t pentatonicTable[45] = {
@@ -49,3 +56,11 @@ uint16_t pentatonicTable[45] = {
   //9854,  11060, 13153, 14764, 16572,  // D8 - B8
   //19708, 22121, 26306                 // D9 - G9
 };
+
+/**
+ * maps an input voltage to PWM frequencies for pentatonic scale.
+ */
+uint16_t mapPentatonic(uint16_t input) {
+  uint8_t value = input / (1024 / 45);
+  return (pentatonicTable[value]);
+}
