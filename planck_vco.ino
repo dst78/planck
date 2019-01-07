@@ -126,7 +126,7 @@ void loop() {
       chaosAmount = map(val, 0, 1024, 0, 100);
       oldChaosVal1 = newChaosVal1;
       newChaosVal1 = (random(CHAOS_AMOUNT_MIN, CHAOS_AMOUNT_MAX) * chaosAmount) / 100;
-      oldChaosVal2 = newChaosVal1;
+      oldChaosVal2 = newChaosVal2;
       newChaosVal2 = (random(CHAOS_AMOUNT_MIN, CHAOS_AMOUNT_MAX) * chaosAmount) / 100;
       
     } else {
