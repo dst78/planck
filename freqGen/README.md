@@ -40,7 +40,7 @@ The 'clean' base note has a frequency of 32.7 Hertz. You can generate frequency 
 So for a base note of 32.6 Hertz you'd call
 ./genVOctTable -n 32.6
 
-...and the vOctTable.h filein the main directory would be rewritten with that value.
+...and the vOctTable.h file in the main directory would be rewritten with that value.
 
 To find the right value for you is a bit of trial and error. In detail:
 
